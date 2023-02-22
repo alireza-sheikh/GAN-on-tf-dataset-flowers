@@ -1,6 +1,7 @@
 # GAN-on-tf-dataset-flowers
-Implement a DCGAN that is introduced in [Matlab website](https://uk.mathworks.com/help/deeplearning/ug/train-generative-adversarial-network.html). 
-This model trained on tensorflow [flower dataset](https://www.tensorflow.org/datasets/catalog/tf_flowers).
+Implement a DCGAN architecture that is introduced in [Matlab website](https://uk.mathworks.com/help/deeplearning/ug/train-generative-adversarial-network.html). 
+This model trained on tensorflow [flower dataset](https://www.tensorflow.org/datasets/catalog/tf_flowers). training part is based on [tensorflow documentation](https://www.tensorflow.org/tutorials/generative/dcgan).  
+
 # Architecture 
 This architecture includes two main parts: 1- generator 2- discriminator and you can see them in the following:  
 # Generator architecture
@@ -58,6 +59,11 @@ def build_discriminator(num_filters=64, kernel_size=5, input_shape=(64, 64, 3), 
   model.add(Dense(1, activation='sigmoid'))
   return model
 ```
+# Results  
+I trained model only 800 epochs because of limitation of google colab by increasing the number of epochs we can expect that result will improve.  
+![result](Images/gan4.png)  
+![result](Images/gan5.png)
+
 
 
 
